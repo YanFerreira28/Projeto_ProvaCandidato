@@ -1,0 +1,72 @@
+﻿@model IEnumerable<ProvaCandidato.Data.Entidade.Cliente>
+
+@{
+    ViewBag.Title = "Lista de Clientes";
+}
+
+<p>
+    @Html.ActionLink("Criar novo", "Create")
+</p>
+
+
+<form class="flexbox" asp-controller="Cliente" asp-action="Index" method="get">
+
+    <div class="form-group">
+        <label>
+            FILTRO
+            <input type="text" name="filtername" id="filtername" class="form-control" placeholder="digite o nome aqui" />
+        </label>
+        <br />
+        <input type="submit" name="btnFilter" id="btnFilter" value="filtrar" />
+        <input type="submit" name="clearFilter" id="clearFilter" value="limpar" />
+    </div>
+</form>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cidade.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cidade.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataNascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ativo)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.Codigo }) |
+                @Html.ActionLink("Detalhes", "Details", new { id = item.Codigo }) |
+                @Html.ActionLink("Deletar", "Delete", new { id = item.Codigo })
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+<script type="text/javascript">
+    $("#clearFilter").click(function () {
+        $("#filtername").val("");
+    })
+</script>

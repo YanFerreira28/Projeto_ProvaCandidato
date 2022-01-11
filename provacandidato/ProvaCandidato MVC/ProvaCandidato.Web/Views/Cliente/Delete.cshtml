@@ -1,0 +1,56 @@
+﻿@model ProvaCandidato.Data.Entidade.Cliente
+
+@{
+    ViewBag.Title = "Deletar";
+}
+
+<h2>Deletar</h2>
+
+<h3>tem certeza que deseja deletar isso?</h3>
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cidade.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cidade.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataNascimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ativo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Deletar" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar para lista", "Index")
+        </div>
+    }
+</div>

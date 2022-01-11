@@ -1,0 +1,53 @@
+﻿body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+  white-space: normal;
+}
+
+
+.title {
+  background: url(/Assets/Images/logo.gif) no-repeat 0 0;
+  height: 58px;
+  padding: 10px 0 0 70px;
+}
+
+#conteudo {
+  padding: 10px;
+}
+
+.linha {
+  background: #04589C;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px;
+}
+
+.navbar {
+  background: #04589C;
+  color: #fff;
+}
+
+.navbar-inverse {
+  border-color: #04589C;
+}
+
+  .navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+  }
+
+    .navbar-inverse .navbar-nav > li > a:hover {
+      background: #fff;
+      color: #04589C;
+    }

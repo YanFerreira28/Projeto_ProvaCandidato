@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Prova Candidado(a) ASP.NET MVC</title>
+    @Styles.Render("~/Assets/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    @RenderSection("head", required: false)
+</head>
+<body>
+    <div class="container body-content">
+        <h1 class="title">@System.Configuration.ConfigurationManager.AppSettings["NomeEmpresa"].ToString()</h1>
+        <div class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Instruções", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Cliente", "Index", "Cliente")</li>
+                        <li>@Html.ActionLink("Cidade", "Index", "Cidade")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="conteudo">
+            @if (@TempData["UserMessage"] != null)
+            {
+                <div id="alert-success" class="alert alert-success">
+                    <strong>Sucesso</strong> @TempData["UserMessage"]
+                </div>
+                TempData["UserMessage"] = null;
+            }
+            @RenderBody()
+        </div>
+        <footer>
+            <div class="linha">2017 &copy; - @System.Configuration.ConfigurationManager.AppSettings["NomeEmpresa"].ToString()</div>
+        </footer>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

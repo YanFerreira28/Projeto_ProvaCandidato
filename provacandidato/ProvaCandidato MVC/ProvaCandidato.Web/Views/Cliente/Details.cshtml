@@ -1,0 +1,50 @@
+﻿@model ProvaCandidato.Data.Entidade.Cliente
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cidade.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cidade.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataNascimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ativo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Codigo }) |
+    @Html.ActionLink("Voltar para lista", "Index")
+</p>

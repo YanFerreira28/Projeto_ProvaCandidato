@@ -1,0 +1,13 @@
+C:\Users\saoinb08devops\Desktop\provacandidato MVC_distancia\provacandidato\ProvaCandidato MVC\ProvaCandidato.Data\bin\Debug\ProvaCandidato.Data.dll.config
+C:\Users\saoinb08devops\Desktop\provacandidato MVC_distancia\provacandidato\ProvaCandidato MVC\ProvaCandidato.Data\bin\Debug\ProvaCandidato.Data.dll
+C:\Users\saoinb08devops\Desktop\provacandidato MVC_distancia\provacandidato\ProvaCandidato MVC\ProvaCandidato.Data\bin\Debug\ProvaCandidato.Data.pdb
+C:\Users\saoinb08devops\Desktop\provacandidato MVC_distancia\provacandidato\ProvaCandidato MVC\ProvaCandidato.Data\bin\Debug\EntityFramework.dll
+C:\Users\saoinb08devops\Desktop\provacandidato MVC_distancia\provacandidato\ProvaCandidato MVC\ProvaCandidato.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\saoinb08devops\Desktop\provacandidato MVC_distancia\provacandidato\ProvaCandidato MVC\ProvaCandidato.Data\bin\Debug\EntityFramework.xml
+C:\Users\saoinb08devops\Desktop\provacandidato MVC_distancia\provacandidato\ProvaCandidato MVC\ProvaCandidato.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\saoinb08devops\Desktop\provacandidato MVC_distancia\provacandidato\ProvaCandidato MVC\ProvaCandidato.Data\obj\Debug\ProvaCandidato.Data.Migrations.provacandidato.resources
+C:\Users\saoinb08devops\Desktop\provacandidato MVC_distancia\provacandidato\ProvaCandidato MVC\ProvaCandidato.Data\obj\Debug\ProvaCandidato.Data.csproj.GenerateResource.cache
+C:\Users\saoinb08devops\Desktop\provacandidato MVC_distancia\provacandidato\ProvaCandidato MVC\ProvaCandidato.Data\obj\Debug\ProvaCandidato.Data.csproj.CoreCompileInputs.cache
+C:\Users\saoinb08devops\Desktop\provacandidato MVC_distancia\provacandidato\ProvaCandidato MVC\ProvaCandidato.Data\obj\Debug\ProvaCandidato.Data.csproj.CopyComplete
+C:\Users\saoinb08devops\Desktop\provacandidato MVC_distancia\provacandidato\ProvaCandidato MVC\ProvaCandidato.Data\obj\Debug\ProvaCandidato.Data.dll
+C:\Users\saoinb08devops\Desktop\provacandidato MVC_distancia\provacandidato\ProvaCandidato MVC\ProvaCandidato.Data\obj\Debug\ProvaCandidato.Data.pdb

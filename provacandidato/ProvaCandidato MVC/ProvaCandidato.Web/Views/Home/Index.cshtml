@@ -1,0 +1,250 @@
+﻿@{
+  ViewBag.Title = "Instruções";
+}
+
+<h2>Olá candidato(a)!</h2>
+
+<h3>Aqui está a sua prova de ASP.NET MVC utilizando linguagem C#</h3>
+<br />
+<br />
+
+<div class="panel panel-default panel-primary">
+  <div class="panel-heading">Instruções Gerais</div>
+  <div class="panel-body">
+    <ul>
+      <li>
+        O projeto utiliza Razor e o EntityFramework para acesso ao SQL Server.
+        Para acessar o banco de dados você deverá rodar uma instância do SQL Server Express em sua máquina. Poderá utilizar a seguinte ConnectionString:<br />
+        <strong>Server=localhost\SQLEXPRESS01;Database=master;Trusted_Connection=True;</strong>
+      </li>
+      <li>
+        Não é necessário que você se preocupe com a formatação e com o CSS. Isso não será avaliado.
+      </li>
+      <li>
+        Caso você não se sinta confortável, poderá implementar outra forma de acesso à dados desde que, no final, a aplicação persista os dados no banco de dados designado.
+      </li>
+      <li>
+        Se você sentir dificuldade em algum item ou em parte de um item, pule para o próximo. Os itens são avaliados separadamente e serão considerados desenvolvimentos parciais.
+      </li>
+      <li>
+        Você pode demonstrar seus conhecimentos utilizando Herança, Javascript, WebAPI ou qualquer outro recurso que julgar interessante. Nesse caso, comente o código com suas intenções. Isso ajudará no momento da avaliação.
+      </li>
+      <li>
+        Se quiser, sugira novas formas de implementação e comente sobre o benefício que poderá ser alcançado.
+      </li>
+    </ul>
+  </div>
+</div>
+<br />
+
+<div class="panel panel-default panel-primary">
+  <div class="panel-heading">Durante o teste, você deverá:</div>
+  <div class="panel-body">
+
+    <h4>Considerando o DER (Diagrama de Entidade e Relacionamento) abaixo para resolver os exercícios:</h4>
+    <p>
+      <img src="~/Assets/Images/ModeloDados.png" />
+      <br />
+      <br />
+    </p>
+
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading01">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse01" aria-expanded="true" aria-controls="collapse01">
+              01. Configuração das Referências do Projeto
+            </a>
+          </h4>
+        </div>
+        <div id="collapse01" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading01">
+          <div class="panel-body">
+            Para concluir este item, você deve referenciar o projeto ProvaCandidato.Data no projeto ProvaCandidato.Web para que possa utilizar o modelo de dados criado previamente.
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading02">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse02" aria-expanded="false" aria-controls="collapse02">
+              02. Parametrizar o Sistema Utilizando o Web.config
+            </a>
+          </h4>
+        </div>
+        <div id="collapse02" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading02">
+          <div class="panel-body">
+            No leiaute, tornar o texto "Parametrize o Nome da Empresa Aqui" parametrizável, sendo que seu conteúdo deverá ser obtido a partir do Web.Config através da chave NomeEmpresa do AppSettings. A classe <code>ConfigurationManager</code> do namespace <code>System.Configuration</code> pode lhe ajudar.
+          </div>
+        </div>
+      </div>
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading03">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse03" aria-expanded="false" aria-controls="collapse03">
+              03. Criar as Funcionalidades para Listagem, Inclusão, Edição, Exclusão e Visualização de Dados
+            </a>
+          </h4>
+        </div>
+        <div id="collapse03" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading03">
+          <div class="panel-body">
+            <ul>
+              <li>Criar o controller Cidade e implementar funcionalidades para listar, criar, editar, excluir e visualizar Cidades.</li>
+              <li>Criar o controller Cliente e implementar funcionalidades para listar, criar, editar, excluir e visualizar Clientes.</li>
+            </ul>
+            Você poderá utilizar o scaffolder do EntityFramework para lhe auxiliar no processo.<br />
+            A Lista de Cliente deverá retornar apenas os clientes ativos.
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading04">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse04" aria-expanded="false" aria-controls="collapse04">
+              04. Validar Campos
+            </a>
+          </h4>
+        </div>
+        <div id="collapse04" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading04">
+          <div class="panel-body">
+            <ul>
+              <li>Incluir uma validação obrigando que o tamanho no Nome da Cidade tenha no mínimo 3 caracteres e no máximo 50 caracteres.</li>
+              <li>Incluir uma validação obrigando que o tamanho no Nome do Cliente tenha no mínimo 3 caracteres e no máximo 50 ca racteres.</li>
+              <li>Incluir uma validação obrigando que a data de nascimento não possa ser maior do que a data atual. Você poderá criar uma validação customizada ou validar manualmente no controller.</li>
+            </ul>
+            Os atributos <code>MinLength</code>, <code>MaxLength</code> e <code>StringLength</code> podem ajudar a validar o tamanho e a validação da data poderá ser realizada diretamente no controller através do <code>ModelState</code>.
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading05">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse05" aria-expanded="false" aria-controls="collapse05">
+              05. Herança
+            </a>
+          </h4>
+        </div>
+        <div id="collapse05" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading05">
+          <div class="panel-body">
+            Crie uma classe genérica herdando de Controller e modifique a herança dos controllers de Cliente e Cidade para que passem a usar essa nova classe. As classes de Cliente e Cidade deverão ser passadas como argumento para a classe genérica.
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading06">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse06" aria-expanded="false" aria-controls="collapse06">
+              06. Formatar Dados
+            </a>
+          </h4>
+        </div>
+        <div id="collapse06" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading06">
+          <div class="panel-body">
+            Corrigir a formatação da Data de Nascimento do Cliente para o formato dia, mês e ano.<br />
+            Talvez você precise utilizar os atributos <code>DataType(DataType.Date)</code> e <code>DisplayFormat</code> para concluir esta atividade.
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading07">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse07" aria-expanded="true" aria-controls="collapse07">
+              07. Utilizar Componente DropDown
+            </a>
+          </h4>
+        </div>
+        <div id="collapse07" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading07">
+          <div class="panel-body">
+            A seleção da Cidade no CRUD de Cliente deve ocorrer através de uma lista de seleção (DropDown ou Combo).
+            <strong>Será considerado um bônus</strong> se você utilizar WebAPI e popular a combo via AJAX. Não se lembra qual é a sintaxe para retornar os dados via AJAX?
+            <br />
+            <br />
+            <code>
+              $.get("ajax/test.html", function(data) {<br />
+              &nbsp;&nbsp;$(".result").html(data);<br />
+              &nbsp;&nbsp;alert("Load was performed.");<br />
+              });
+            </code>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading08">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse08" aria-expanded="false" aria-controls="collapse08">
+              08. Implementar Pesquisa de Dados
+            </a>
+          </h4>
+        </div>
+        <div id="collapse08" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading08">
+          <div class="panel-body">
+            Implementar na Lista de Clientes uma funcionalidade que permita pesquisar (filtrar) os Clientes por qualquer parte do Nome.
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading09">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse09" aria-expanded="false" aria-controls="collapse09">
+              09. Utilizar o Helper para Exibição de Mensagem
+            </a>
+          </h4>
+        </div>
+        <div id="collapse09" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading09">
+          <div class="panel-body">
+            Após a inclusão, alteração e exclusão de um Cliente ou Cidade, exibir uma mensagem de sucesso usando a classe <code>MessageHelper</code>.
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading10">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="false" aria-controls="collapse10">
+              10. Padronizar Lista de Cliente
+            </a>
+          </h4>
+        </div>
+        <div id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading10">
+          <div class="panel-body">
+            Modificar a Lista de Clientes para que exiba o Nome da Cidade do Cliente. Será necessário fazer o <code>Include</code> da propriedade Cidade ao montar a query no <code>DBSet</code> do Cliente.
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading11">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse11" aria-expanded="false" aria-controls="collapse11">
+              11. Implementar uma Lista de Observações do Cliente
+            </a>
+          </h4>
+        </div>
+        <div id="collapse11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading110">
+          <div class="panel-body">
+            Este item é opcional e você poderá utilizá-lo para demonstrar seu conhecimento com o EntityFramework, Migrations e Javascript.<br />
+            <ul>
+              <li>Você deverá criar uma classe chamada ClienteObservacao cujo conteúdo será apenas uma propriedade para armazenar a observação e uma referência para o Cliente.</li>
+              <li>Você deverá alterar a classe Cliente para que esta contenha uma lista de observações do cliente. Não se esqueça do atributo <code>InverseProperty</code> e que a propriedade deve ser do tipo <code>ICollection<></code>.</li>
+              <li>Você deverá alterar a visualização de detalhe do cliente para que seja possível adicionar as observações.</li>
+              <li>A inclusão de uma nova observação deverá ocorrer através de um popup que exibirá uma Partial View.</>
+            </ul>
+            Lembre-se que o projeto de dados é o ProvaCandidato.Data e o Migrations não está habilitado. Os comandos <code>help Enable-Migrations</code>, <code>help Add-Migration</code> e <code>help Update-Database</code> poderão ser muito úteis para habilitar o Migrations e atualizar o banco de dados.<br />
+            <br />
+            Abaixo, um exemplo para implementar a partial view...<br />
+            <img src="~/Assets/Images/ExemploPartialView.jpg" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<br />
